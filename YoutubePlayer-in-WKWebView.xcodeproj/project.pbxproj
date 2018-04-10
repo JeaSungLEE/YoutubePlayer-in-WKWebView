@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		696654E7206C0F4C007DCD8E /* YoutubePlayer_in_WKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 696654C4206C0F4B007DCD8E /* YoutubePlayer_in_WKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		696654E8206C0F4C007DCD8E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 696654C5206C0F4B007DCD8E /* README.md */; };
-		696654E9206C0F4C007DCD8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 696654C6206C0F4B007DCD8E /* Info.plist */; };
 		696654ED206C0F4C007DCD8E /* WKYTPlayerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 696654CB206C0F4B007DCD8E /* WKYTPlayerView.bundle */; };
 		696654EE206C0F4C007DCD8E /* WKYTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 696654CC206C0F4B007DCD8E /* WKYTPlayerView.m */; };
 		696654EF206C0F4C007DCD8E /* WKYTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 696654CD206C0F4B007DCD8E /* WKYTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		696654FE206C0F4C007DCD8E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 696654E5206C0F4C007DCD8E /* LICENSE */; };
 		696654FF206C0F4C007DCD8E /* YoutubePlayer-in-WKWebView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 696654E6206C0F4C007DCD8E /* YoutubePlayer-in-WKWebView.podspec */; };
+		696874A5207D341E000E6E8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696874A4207D341E000E6E8A /* UIKit.framework */; };
+		696874A7207D342A000E6E8A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696874A6207D342A000E6E8A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		696654CD206C0F4B007DCD8E /* WKYTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKYTPlayerView.h; sourceTree = "<group>"; };
 		696654E5206C0F4C007DCD8E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		696654E6206C0F4C007DCD8E /* YoutubePlayer-in-WKWebView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "YoutubePlayer-in-WKWebView.podspec"; sourceTree = "<group>"; };
+		696874A4207D341E000E6E8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		696874A6207D342A000E6E8A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696874A7207D342A000E6E8A /* WebKit.framework in Frameworks */,
+				696874A5207D341E000E6E8A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,7 @@
 				696654C4206C0F4B007DCD8E /* YoutubePlayer_in_WKWebView.h */,
 				696654E6206C0F4C007DCD8E /* YoutubePlayer-in-WKWebView.podspec */,
 				696654BA206C0DE5007DCD8E /* Products */,
+				696874A3207D341E000E6E8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +75,15 @@
 				696654CD206C0F4B007DCD8E /* WKYTPlayerView.h */,
 			);
 			path = WKYTPlayerView;
+			sourceTree = "<group>";
+		};
+		696874A3207D341E000E6E8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				696874A6207D342A000E6E8A /* WebKit.framework */,
+				696874A4207D341E000E6E8A /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +159,6 @@
 				696654FF206C0F4C007DCD8E /* YoutubePlayer-in-WKWebView.podspec in Resources */,
 				696654FE206C0F4C007DCD8E /* LICENSE in Resources */,
 				696654ED206C0F4C007DCD8E /* WKYTPlayerView.bundle in Resources */,
-				696654E9206C0F4C007DCD8E /* Info.plist in Resources */,
 				696654E8206C0F4C007DCD8E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +298,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "AC.YoutubePlayer-in-WKWebView";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -303,6 +318,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "AC.YoutubePlayer-in-WKWebView";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
